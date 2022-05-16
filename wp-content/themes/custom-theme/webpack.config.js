@@ -1,13 +1,21 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-    entry: ["./assets/js/index.js", "./assets/scss/index.scss"],
+    entry: ["./src/js/index.js", "./src/scss/index.scss"],
     output: {
         filename: "app.js",
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "app.css",
+        }),
+        new BrowserSyncPlugin({
+            host: "localhost",
+            port: 3000,
+            files: ["**/*.php", "./dist/*.css", "./dist/*.js"],
+            proxy: "wordpress.test",
+            notify: false,
         }),
     ],
     module: {

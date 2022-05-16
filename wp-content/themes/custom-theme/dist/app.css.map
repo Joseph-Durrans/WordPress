@@ -1,0 +1,1 @@
+{"version":3,"file":"app.css","mappings":";;;AAEA;EACI;EACA;KAAA;UAAA;AADJ,C","sources":["webpack://custom-theme/./src/scss/index.scss"],"sourcesContent":["// scss index\r\n\r\nbody {\r\n    background: red;\r\n    user-select: all;\r\n}\r\n"],"names":[],"sourceRoot":""}
