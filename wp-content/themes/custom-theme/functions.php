@@ -1,5 +1,13 @@
 <?php 
 
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
+// add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
 function enqueue_app() {
     wp_enqueue_style("app", get_stylesheet_directory_uri() . "/dist/app.css");
     wp_enqueue_script("app", get_stylesheet_directory_uri() . "/dist/app.js");
